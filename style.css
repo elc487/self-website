@@ -4,14 +4,14 @@
 html{
     background-color: #1f2933;
     color: #f5f7fa;
-}
-html,
-body {
-    height: 100;
     margin: 0;
+    height: 100%;
+}
 
-    
-
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .page-container{
@@ -53,18 +53,28 @@ body {
 .nav li a:hover {
     color: #090a0b;
 }
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #616e7c;
+    padding: 2px;
+    margin-top: auto;
+}
+
 .aboutgrid {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    
- 
 }
 
+.aboutgrid > *{
+    flex: 1 1 10em;
+}
 
 .aboutcard {
     background-color: #3e4c59;
-    width: 100px
+    width: 1000px
     box-shadow 0 0 20px rgba(0,0,0,20);   
     padding: 3%;
     border-radius: 5px;
@@ -93,17 +103,11 @@ body {
     height: 300px;
 }   
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #616e7c;
-    padding: 2px;
-    
-}
-
 .fit-size{
-    height: 300px;
+    width: 100%;
+    max-height: 400px;
+    object-fit: scale-down;
+
 }
 
 .portfolioproject{
@@ -123,5 +127,7 @@ footer{
 
 .portfoliocontainer{
       max-width: 960px;
-      
+      display: flex;
+      justify-content: center;
+      align-content: center;
 }
